@@ -1,0 +1,94 @@
+name: md2xlsx
+description: 将 Markdown 格式的表格转换为 Excel (.xlsx) 文件
+version: 1.0.0
+
+entry: index.js
+
+parameters:
+  input:
+    type: string
+    description: 输入的 Markdown 文件路径
+    required: false
+    aliases:
+      - i
+  
+  output:
+    type: string
+    description: 输出的 Excel 文件路径
+    required: false
+    default: output.xlsx
+    aliases:
+      - o
+  
+  default-headers:
+    type: boolean
+    description: 是否使用默认的字段映射表头
+    required: false
+    default: false
+    aliases:
+      - d
+
+usage: |
+  # 基本用法
+  opencode skill md2xlsx -i input.md -o output.xlsx
+  
+  # 使用默认表头（字段映射模板）
+  opencode skill md2xlsx -i input.md -o output.xlsx -d
+  
+  # 从管道输入
+  cat input.md | opencode skill md2xlsx -o output.xlsx
+
+examples:
+  - description: 转换 Markdown 文件为 Excel
+    command: opencode skill md2xlsx -i mapping.md -o field_mapping.xlsx
+  
+  - description: 使用默认的字段映射表头
+    command: opencode skill md2xlsx -i data.md -o output.xlsx --default-headers
+
+category: data-processing
+tags:
+  - markdown
+  - excel
+  - xlsx
+  - converter
+  - etl
+
+author: OpenCode
+license: MIT
+
+documentation: |
+  ## 功能说明
+  
+  此技能用于将 Markdown 格式的表格转换为 Excel (.xlsx) 文件。
+  
+  ## 支持的 Markdown 表格格式
+  
+  ```markdown
+  | 序号 | 列名 |
+  |------|------|
+  | 1 | 目标实体 物理表名称* |
+  | 2 | 目标实体 字段名称* |
+  ```
+  
+  ## 默认表头（字段映射模板）
+  
+  当使用 `-d` 或 `--default-headers` 选项时，将使用以下表头：
+  
+  1. 目标实体 物理表名称*
+  2. 目标实体 字段名称*
+  3. 目标实体 属性名称
+  4. 生成方式*
+  5. 来源实体 所属schema*
+  6. 来源实体 物理表名称*
+  7. 来源实体 别名
+  8. 来源实体 字段名称*
+  9. 来源实体 属性名称
+  10. 加工逻辑描述*
+  11. 去重判断
+  12. 责任人
+  13. 字段类型
+  14. 字段长度
+  15. 主键（Y,N）
+  16. 变更记录(xxxx年xx月xx日 xx版本 xxx)
+  17. 备注
+  18. 字段长度(需要小于30位)
