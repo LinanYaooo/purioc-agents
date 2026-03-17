@@ -8,3 +8,6 @@ build/
 coverage/
 .vscode/
 .idea/
+__pycache__/
+*.pyc
+*.pyo
