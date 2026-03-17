@@ -1,0 +1,17 @@
+{
+  "version": "1.0",
+  "rules": {
+    "enabled": true,
+    "paths": [".opencode/rules"]
+  },
+  "plugins": {
+    "enabled": true,
+    "paths": [".opencode/plugins"]
+  },
+  "subagents": {
+    "paths": [".opencode/subagents"]
+  },
+  "mcp": {
+    "paths": [".opencode/mcp"]
+  }
+}

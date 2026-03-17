@@ -1,0 +1,14 @@
+{
+  "rules": [
+    {
+      "id": "no-console-log",
+      "description": "Avoid console.log statements",
+      "severity": "warning"
+    },
+    {
+      "id": "use-const",
+      "description": "Prefer const over let",
+      "severity": "error"
+    }
+  ]
+}

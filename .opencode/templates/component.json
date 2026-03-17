@@ -1,0 +1,10 @@
+{
+  "name": "component-template",
+  "description": "React component template",
+  "files": [
+    {
+      "path": "Component.tsx",
+      "content": "import React from 'react';\n\nexport const {{name}} = () => {\n  return (\n    <div>{{name}}</div>\n  );\n};"
+    }
+  ]
+}

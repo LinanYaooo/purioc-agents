@@ -1,0 +1,14 @@
+{
+  "subagents": [
+    {
+      "name": "code-reviewer",
+      "description": "Reviews code for issues and improvements",
+      "prompt": "You are a code reviewer. Review the provided code and suggest improvements."
+    },
+    {
+      "name": "test-generator",
+      "description": "Generates tests for the given code",
+      "prompt": "You are a test generator. Generate unit tests for the provided code."
+    }
+  ]
+}

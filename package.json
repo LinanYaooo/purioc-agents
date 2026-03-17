@@ -1,0 +1,15 @@
+{
+  "name": "purioc-agents",
+  "version": "1.0.0",
+  "description": "AI agent project",
+  "main": "src/index.ts",
+  "scripts": {
+    "dev": "ts-node src/index.ts",
+    "build": "tsc",
+    "lint": "eslint src --ext .ts",
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT"
+}
